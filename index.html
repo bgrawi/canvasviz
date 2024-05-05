@@ -285,7 +285,7 @@
                             fourierFunction: basicFourierFunction,
                             fourierFunctionMax: basicFourierFunctionMax,
                             getAudioWaveCoefficients: function(f_pos) {
-                                var imag = ((f_pos  % 2) === 0)? -basicFourierFunctionMax(f_pos): 0;
+                                var imag = ((f_pos  % 2) === 0 && f_pos > 0)? -basicFourierFunctionMax(f_pos): 0;
                                 
                                 return [0, imag];
                             },
